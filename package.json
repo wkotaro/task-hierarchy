@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "parcel public/index.html",
-    "build": "parcel build public/index.html"
+    "build": "parcel build public/index.html --out-dir build && cp public/.htaccess build/ 2>/dev/null || : && cp public/_redirects build/ 2>/dev/null || :"
   },
   "dependencies": {
     "react": "^17.0.2",
