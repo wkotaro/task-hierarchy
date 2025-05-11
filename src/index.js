@@ -5,11 +5,9 @@ import App from './App';
 import { TaskProvider } from './context/TaskContext';
 import './styles.css';
 
-// 現在の環境に基づいてベースURLを設定
-const basename = process.env.PUBLIC_URL || '/';
-
+// HashRouterでbasenameは不要なので削除
 ReactDOM.render(
-  <Router basename={basename}>
+  <Router>
     <TaskProvider>
       <App />
     </TaskProvider>
